@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="button" onclick="getShowList()">Song List</button>
+    <button class="button" id="showListMusic">Show</button>
+
+    <button class="window" onclick="getOpenWindow()">Show Modal Window</button>
+    <div
+      class="modal"
+      id="modal"
+      style="
+     width : 100%;
+      height : 880px;
+     background: rgba(0,0,0,0.5); 
+     position : absolute;
+     top : 0;
+     left : 0;
+     
+     display: none;
+     "
+    >
+      <div
+        class="modal-content"
+        style="position : absolute;
+         width : 400px;
+         height: 250px;
+         border : 2px solid red;
+         padding: 10px;
+         left : 50%;
+         top : 50%;
+         transform: translate(-50%, -50%);
+         text-align : center;
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;"
+      >
+        <div class="text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+          voluptate possimus tenetur laborum vero accusamus expedita commodi
+          explicabo quibusdam porro!
+        </div>
+        <button class="closeWindow" onclick="closeWindow()">Close</button>
+      </div>
+    </div>
+
+    <ol id="ListMusic"></ol>
+
+    <div>
+      <div class="Light">
+        <div id="red" class="circle"></div>
+      </div>
+      <div class="Light">
+        <div id="yellow" class="circle"></div>
+      </div>
+      <div class="Light">
+        <div id="green" class="circle"></div>
+      </div>
+    </div>
+    <button id="turnOn" onclick="turnOn()">Turn on traffic light</button>
+    <button id="change" onclick="changeLight()" style="display: none;">
+      Change Light
+    </button>
+    <button id="turnOff" onclick="turnOff()" style="display: none;">
+      Turn off
+    </button>
+
+    <style>
+      .Light {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid #000000;
+        background-color: gray;
+      }
+      .circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    </style>
+    <script src="main.js"></script>
+  </body>
+</html>
